@@ -1,4 +1,5 @@
 /* //////////PAGE Setting\\\\\\\\\\ */
+
 *
     margin: 0
     padding: 0
@@ -741,3 +742,203 @@ a
 
 .footer__product_position
     margin-top: 128px
+
+/* //////////CART PAGE\\\\\\\\\\ */   
+
+.cart
+    display: flex
+    justify-content: space-between
+
+    &__card
+        margin-top: 96px
+
+        &_self
+            position: relative
+            width: 652px
+            min-height: 306px
+            margin-bottom: 40px
+            display: flex
+            align-items: flex-start
+            box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+
+            &_img
+                height: 306px
+
+            &_link
+                height: 306px
+                width: 262px
+                position: absolute
+                top: 0
+                left: 0
+                background-color: black
+                opacity: 0
+
+                &:hover
+                    opacity: 0.2
+
+            &_info
+                margin-left: 32px
+                margin-top: 22px
+
+                &_header
+                    width: 262px
+                    min-height: 58px
+                    font-weight: 400
+                    font-size: 24px
+                    line-height: 29px
+                    color: #222222
+                    text-align: left
+                    margin-bottom: 42px
+
+                &_text
+                    display: flex
+                    margin-bottom: 6px
+                    font-weight: 400
+                    font-size: 22px
+                    line-height: 26px
+                    color: #575757
+
+                &_value
+                    margin-left: 6px
+
+                &_priceColor
+                    color: #F16D7F
+
+                &_qPosition
+                    margin-left: 24px
+                    border: 1px solid #EAEAEA
+                    width: 44px
+                    height: 24px
+                    text-align: center
+                    line-height: 22px
+
+            &_closeIcon
+                margin-left: 57px
+                margin-top: 28px
+
+                &:hover
+                    fill: #F16D7F
+
+        &_button
+            display: flex
+            justify-content: space-between
+            margin-top: 72px
+
+            &_style
+                width: 234px
+                height: 49px
+                background: #FFFFFF
+                font-weight: 300
+                font-size: 14px
+                line-height: 17px
+                color: #000000
+                border: 1px solid #A4A4A4
+
+                &:hover
+                    background-color: #F16D7F
+                    color: #FFFFFF
+
+    &__form
+        width: 360px
+        margin-top: 113px
+
+        &_box
+
+            &_header
+                font-weight: 300
+                font-size: 16px
+                line-height: 19px
+                color: #222222
+                margin-bottom: 20px
+
+            &_input
+                width: 360px
+                height: 44px
+                padding-inline-start: 17px
+                padding-inline-end: 17px
+                border: 1px solid #A4A4A4
+                font-weight: 300
+                font-size: 13px
+                line-height: 16px
+                color: #000000
+                margin-bottom: 20px
+
+                &:focus::-webkit-input-placeholder
+                    color: transparent
+
+                &_color::-webkit-input-placeholder
+                    color: #B1B1B1
+
+            &_button
+                margin-bottom: 24px
+                width: 100px
+                height: 34px
+                font-weight: 300
+                font-size: 11px
+                line-height: 13px
+                color: #4A4A4A
+                border: 1px solid #A4A4A4
+                background-color: #FFFFFF
+
+                &:hover
+                    background-color: #F16D7F
+                    color: #FFFFFF
+
+        &_final
+            width: 360px
+            height: 214px
+            background-color: #F5F3F3
+            margin-top: 58px
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+
+            &_preheader
+                min-width: 108px
+                padding-right: 34px
+                padding-top: 39px
+                display: flex
+                font-size: 11px
+                line-height: 13px
+                color: #4A4A4A
+                justify-content: space-between
+                margin-bottom: 12px
+
+                &_text
+                    margin-right: 34px
+
+            &_header
+                min-width: 170px
+                padding-right: 37px
+                margin-bottom: 21px
+                font-weight: 300
+                font-size: 16px
+                line-height: 19px
+                color: #222222
+                display: flex
+
+                &_text
+                    margin-right: 34px
+
+                &_price
+                    color: #F16D7F
+
+            &_line
+                border-bottom: 1px solid #E2E2E2
+                margin-bottom: 17px
+                width: 275px
+                align-self: center
+
+            &_button
+                width: 273px
+                height: 50px
+                font-weight: 300
+                font-size: 16px
+                line-height: 19px
+                color: #FFFFFF
+                background-color: #F16D7F
+                border: 0
+                align-self: center
+
+                &:hover
+                    background-color: #E05C6E
