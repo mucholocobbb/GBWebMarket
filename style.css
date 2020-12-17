@@ -223,6 +223,7 @@ a {
 
 .product__card {
   margin-top: 48px;
+  margin-bottom: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,7 +342,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 48px;
 }
 
 .product__button_box:hover {
@@ -1138,10 +1138,9 @@ a {
 .cart__card_self_info_qPosition {
   margin-left: 24px;
   border: 1px solid #EAEAEA;
-  width: 44px;
-  height: 24px;
-  text-align: center;
-  line-height: 22px;
+  text-align: end;
+  line-height: 24px;
+  font-size: 22px;
 }
 
 .cart__card_self_closeIcon {
