@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header__footer {
+  height: 164px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(8.84%, #bec0c0), color-stop(31.12%, rgba(89, 91, 94, 0)));
+  background: linear-gradient(0deg, #bec0c0 8.84%, rgba(89, 91, 94, 0) 31.12%);
+  padding-top: 100px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+}
+
+.content {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 64px;
+}
+
+.content__header {
+  padding-bottom: 32px;
+  opacity: 0.7;
+}
+
+.content__doggy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 320px;
+}
+
+.content__kitty {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 320px;
+}
+
+.content__rabbit {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 320px;
+}
+
+.content__text__block {
+  width: 512px;
+  margin: 0 25px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.content__gallery {
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  width: 512px;
+  padding: 25px;
+  margin: 0 25px;
+}
+
+.carousel-inner {
+  height: 270px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */
