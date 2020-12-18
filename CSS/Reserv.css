@@ -93,7 +93,7 @@ a {
 }
 
 .promo__right_contentred {
-    color: #F16D7F;
+    color: $colorMainCheck;
 }
 
 /* //////////CatalogBox\\\\\\\\\\ */
@@ -138,7 +138,7 @@ a {
     line-height: 40px;
     text-align: center;
     font-weight: 700;
-    color: #F16D7F;
+    color: $colorMainCheck;
 
 }
 
@@ -262,7 +262,7 @@ a {
 .product__card_price {
     font-size: 16px;
     line-height: 19px;
-    color: #F16D7F;
+    color: $colorMainCheck;
     margin-top: 18px;
 }
 
@@ -290,7 +290,7 @@ a {
 }
 
 .product__button_box:hover {
-    background-color: #F16D7F;
+    background-color: $colorMainCheck;
 
 }
 
@@ -410,7 +410,7 @@ a {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     border: 0;
-    background-color: #F16D7F;
+    background-color: $colorMainCheck;
     color: #FFFFFF;
     font-size: 14px;
     line-height: 17px;
@@ -450,7 +450,7 @@ a {
 }
 
 .footer__bott_link_box:hover {
-    background-color: #F16D7F;
+    background-color: $colorMainCheck;
 
 }
 
@@ -485,7 +485,7 @@ a {
 .navi__header {
     font-size: 24px;
     line-height: 29px;
-    color: #F16D7F;
+    color: $colorMainCheck;
 }
 
 .navi__way_link {
@@ -496,7 +496,7 @@ a {
 }
 
 .navi__way_link:hover {
-    color: #F16D7F;
+    color: $colorMainCheck;
 }
 
 .navi__way_link:not(:last-child)::after {
@@ -507,7 +507,7 @@ a {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-    color: #F16D7F;
+    color: $colorMainCheck;
 }
 
 /* //////////Product Box\\\\\\\\\\ */
@@ -783,7 +783,7 @@ a {
 }
 
 .preview__slider_icon:hover .preview__icon_color {
-    fill: #F16D7F;
+    fill: $colorMainCheck;
 
 }
 
@@ -819,7 +819,7 @@ a {
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
-    color: #F16D7F;
+    color: $colorMainCheck;
     margin-bottom: 12px;
 }
 
