@@ -1,4 +1,97 @@
 /* //////////PAGE Setting\\\\\\\\\\ */
+@-webkit-keyframes mainLogoRotateBW {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes mainLogoRotateBW {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes mainLogoRotateFW {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes mainLogoRotateFW {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes logoSize {
+  0% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes logoSize {
+  0% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes promoLine {
+  0% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes promoLine {
+  0% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes promoText {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes promoText {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +140,21 @@ a {
   margin-left: 34px;
 }
 
+.header__right_img:hover {
+  -webkit-animation: logoSize 0.5s;
+          animation: logoSize 0.5s;
+}
+
+.header__logo_img {
+  -webkit-animation: mainLogoRotateBW 1s;
+          animation: mainLogoRotateBW 1s;
+}
+
+.header__logo_img:hover {
+  -webkit-animation: mainLogoRotateFW 1s;
+          animation: mainLogoRotateFW 1s;
+}
+
 /* //////////PromoBox\\\\\\\\\\ */
 .promo {
   display: -webkit-box;
@@ -74,6 +182,8 @@ a {
 
 .promo__right_line {
   padding-left: 64px;
+  -webkit-animation: promoLine 1s;
+          animation: promoLine 1s;
 }
 
 .promo__right_text {
@@ -89,6 +199,8 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-animation: promoText 1s;
+          animation: promoText 1s;
 }
 
 .promo__right_header {

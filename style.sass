@@ -1,6 +1,7 @@
 /* //////////PAGE Setting\\\\\\\\\\ */
 
 @import css/_vars
+@import css/_keyframes
 
 *
     margin: 0
@@ -36,6 +37,16 @@ a
     &__right_img
         margin-left: 34px
 
+        &:hover
+            animation: logoSize 0.5s
+
+    &__logo_img
+
+        animation: mainLogoRotateBW 1s
+
+        &:hover
+            animation: mainLogoRotateFW 1s
+
 /* //////////PromoBox\\\\\\\\\\ */
 
 .promo
@@ -55,6 +66,7 @@ a
 
     &__right_line
         padding-left: 64px
+        animation: promoLine 1s
 
     &__right_text
         display: flex
@@ -62,6 +74,7 @@ a
         margin-left: 16px
         flex-direction: column
         justify-content: flex-end
+        animation: promoText 1s
 
     &__right_header
 
@@ -161,6 +174,8 @@ a
         flex-wrap: wrap
         justify-content: center
         gap: 30px
+
+    &_
 
     &__card_self:hover .product__card_img
         filter: brightness(50%)
