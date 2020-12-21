@@ -1,6 +1,15 @@
 .checkout
+    margin-top: 64px
+    display: flex
+    justify-content: space-between
 
     &__form
+
+        &_heading
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: #222222
 
         &_input
 
@@ -9,6 +18,85 @@
             height: 44px
             padding-inline-start: 16px
             padding-inline-end: 16px
+            margin-top: 20px
+            &::-webkit-input-placeholder
+                font-weight: 300
+                font-size: 13px
+                line-height: 16px
+                color: #B1B1B1
 
-.checkout__form_heading
-    font-size: 36px
+        &_radioButton
+            margin-top: 31px
+            margin-bottom: 33px
+            display: flex
+
+        &_radioPosition
+            margin-right: 10px
+
+        &_radioText
+            margin-right: 20px
+            font-weight: 300
+            font-size: 11px
+            line-height: 13px
+            color: #000000
+
+        &_helpText
+            font-weight: 300
+            font-size: 13px
+            line-height: 16px
+            color: #B1B1B1
+            width: 360px
+            margin-top: 15px
+            margin-bottom: 40px
+        &_button
+            width: 167px
+            height: 50px
+            background-color: $colorMainCheck
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+            color: #FFFFFF
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 0
+            &:hover
+                background-color: $colorMainHover
+
+        &_buttText
+            margin-right: 20px
+            line-height: 14px
+
+    &__text
+        max-width: 652px
+        margin-left: 64px
+
+        &_heading
+            font-weight: 300
+            font-size: 24px
+            line-height: 29px
+            color: #000000
+            margin-bottom: 22px
+
+        &_info
+            font-weight: 300
+            font-size: 24px
+            line-height: 29px
+            color: #000000
+            margin-bottom: 22px
+
+        &_list
+            font-weight: 300
+            font-size: 24px
+            line-height: 29px
+            color: #000000
+            margin-bottom: 22px
+            list-style-type: none
+        &_listElements
+            margin-bottom: 16px
+            &::before
+                content: url(img/checkout/listMarker.svg)
+                padding-right: 23px
+
+.footer__checkout_position
+    margin-top: 96px

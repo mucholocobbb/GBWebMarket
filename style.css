@@ -493,7 +493,7 @@ a {
 }
 
 .footer__content_button:hover {
-  background-color: #E05C6E;
+  background-color: #e05c6e;
 }
 
 .footer__bott {
@@ -556,7 +556,7 @@ a {
           align-items: center;
 }
 
-.footer__bott_link_box:hover .footer__bott_links {
+.footer__bott_links:hover .footer__bott_links {
   fill: white;
 }
 
@@ -1313,6 +1313,144 @@ a {
 }
 
 .cart__form_final_button:hover {
-  background-color: #E05C6E;
+  background-color: #e05c6e;
+}
+
+/* //////////CHECKOUT PAGE\\\\\\\\\\ */
+.checkout {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout__form_heading {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+.checkout__form_input {
+  border: 1px solid #A4A4A4;
+  width: 360px;
+  height: 44px;
+  -webkit-padding-start: 16px;
+          padding-inline-start: 16px;
+  -webkit-padding-end: 16px;
+          padding-inline-end: 16px;
+  margin-top: 20px;
+}
+
+.checkout__form_input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.checkout__form_radioButton {
+  margin-top: 31px;
+  margin-bottom: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.checkout__form_radioPosition {
+  margin-right: 10px;
+}
+
+.checkout__form_radioText {
+  margin-right: 20px;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+
+.checkout__form_helpText {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  width: 360px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.checkout__form_button {
+  width: 167px;
+  height: 50px;
+  background-color: #F16D7F;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+}
+
+.checkout__form_button:hover {
+  background-color: #e05c6e;
+}
+
+.checkout__form_buttText {
+  margin-right: 20px;
+  line-height: 14px;
+}
+
+.checkout__text {
+  max-width: 652px;
+  margin-left: 64px;
+}
+
+.checkout__text_heading {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.checkout__text_info {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.checkout__text_list {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+  list-style-type: none;
+}
+
+.checkout__text_listElements {
+  margin-bottom: 16px;
+}
+
+.checkout__text_listElements::before {
+  content: url(img/checkout/listMarker.svg);
+  padding-right: 23px;
+}
+
+.footer__checkout_position {
+  margin-top: 96px;
 }
 /*# sourceMappingURL=style.css.map */
