@@ -1,0 +1,234 @@
+/* //////////Navi Box\\\\\\\\\\ */
+.navi
+    height: 148px
+    background-color: #f8f3f4
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__header
+        font-size: 24px
+        line-height: 29px
+        color: $colorMainCheck
+
+    &__way_link
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #636363
+
+    &__way_link:hover
+        color: $colorMainCheck
+
+    &__way_link:not(:last-child)::after
+        content: " / "
+
+    &__way_link:last-child
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        color: $colorMainCheck
+
+/* //////////Product Box\\\\\\\\\\ */
+
+.product__head_position
+    display: block
+
+.product__catalog_head
+    margin-bottom: 65px
+    margin-top: 51px
+    display: flex
+
+.product__catalog_filter_text
+    margin-right: 11px
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    color: #000000
+
+.product__catalog_filter_box
+    position: relative
+    padding-left: 16px
+
+    &:hover .product__catalog_filter_list
+        display: flex
+
+.product__catalog_head_filter
+    position: relative
+    display: flex
+    z-index: 20
+
+.product__catalog_filter_box:hover .product__catalog_filter_text
+    color: #EF5B70
+
+.product__catalog_filter_list
+    min-height: 531px
+    width: 360px
+    background-color: #ffffff
+    box-shadow: 0 0 30px -10px
+    position: absolute
+    top: -13px
+    left: 0
+    display: none
+    z-index: 10
+    display: flex
+    flex-direction: column
+    padding-top: 46px
+    display: none
+
+.product__filter_header_box
+    color: #EF5B70
+    font-size: 14px
+    line-height: 17px
+    width: 327px
+    height: 37px
+    border-bottom: 1px solid #EF5B70
+    border-left: 5px solid #EF5B70
+    padding-left: 11px
+    line-height: 37px
+    margin-left: 17px
+
+    &::-webkit-details-marker
+        display: none
+
+.product__filter_list_category
+    margin-bottom: 18px
+
+.product__filter_list_box
+    margin-top: 24px
+    margin-left: 34px
+
+.product__filter_link_box
+    list-style-type: none
+    margin-bottom: 11px
+
+.product__filter_links
+    font-size: 14px
+    line-height: 17px
+    color: #6F6E6E
+
+.product__catalog_filter_iconRed
+    position: absolute
+    bottom: 3.5px
+    right: 0px
+
+.product__catalog_filter_icon
+    z-index: 1
+
+    &Red
+        opacity: 0
+
+    .product__catalog_filter_box:hoverRed &
+        z-index: 2
+        opacity: 1
+
+    .product__catalog_filter_box:hover &
+        opacity: 0
+
+.product__change_list
+    margin-left: 304px
+    display: flex
+
+//разобраться с рамкой
+
+.product__change_element_header
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: #6F6E6E
+    margin-right: 10px
+    // outline: none
+    // &::-webkit-details-marker
+    //     display: none
+    // &:focus
+    //     outline: -webkit-focus-ring-color auto 0
+    //     outline-offset: 0
+
+.product__change_element_img
+    margin-left: 10px
+    line-height: 17px
+
+.product__change_element_header::-webkit-details-marker
+    display: none
+
+    //Разобраться с рамкой
+
+.product__change_element
+    margin-right: 28px
+    display: flex
+    position: relative
+    // outline: none
+    // &::-webkit-details-marker
+    //     display: none
+    // &:focus
+    //     outline: -webkit-focus-ring-color auto 0
+    //     outline-offset: 0
+
+    &_box
+        background-color: #ffffff
+        box-shadow: 0 0 10px -5px
+        position: absolute
+        top: 23px
+        left: 0
+        z-index: 10
+        padding-top: 10px
+        padding-left: 10px
+
+.product__tranding_box_size
+    min-height: 100px
+    min-width: 132px
+
+.product__size_box_size
+    min-height: 103px
+    min-width: 79px
+
+.product__price_box_size
+    min-height: 103px
+    min-width: 180px
+
+.product__change_checkbox_box
+    display: flex
+    justify-content: flex-start
+    margin-bottom: 6px
+
+.product__change_checkbox_checkbox
+    position: absolute
+    display: none
+
+.product__change_checkbox_text
+    font-family: Roboto
+    font-size: 14px
+    line-height: 16px
+    color: #6F6E6E
+    margin-left: 10px
+
+.product__pagination
+    border: 1px solid #EBEBEB
+    height: 43px
+    width: 283px
+    margin: 48px auto 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-radius: 5px
+
+.pagination__coursor
+    padding: 0 17px
+
+.product__change_checkbox_checkbox+.input__decoration
+    position: relative
+    padding: 0 0 0 15px
+
+    & :before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 12px
+        height: 12px
+
+        background: #ffffff
+        border: 1px solid #EBEBEB
+
+.product__change_checkbox_checkbox:checked+.input__decoration :before
+    content: '\2714'
