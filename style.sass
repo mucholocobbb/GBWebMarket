@@ -175,13 +175,16 @@ a
         justify-content: center
         gap: 30px
 
-    &_
+        &_self:hover .product__card_img
+            filter: brightness(50%)
 
-    &__card_self:hover .product__card_img
-        filter: brightness(50%)
+        &_self:hover .product__add_cart
+            display: flex
 
-    &__card_self:hover .product__add_cart
-        display: flex
+        &_img
+            transition: transform 0.5s
+            &:hover
+                transform: scale(1.03,1.03)
 
     &__add_cart
         font-size: 14px
@@ -202,6 +205,13 @@ a
     &__add_cart:active
         background-color: rgba(255, 255, 255, 0.2)
         box-shadow: 0 0 10px #FFFFFF
+
+    &__add_sale
+        color: red
+        position: absolute
+        bottom: 160px
+        left: 0
+        animation: sale 2s infinite cubic-bezier(1,1.01,.99,1.01)
 
     &__card_self
         position: relative

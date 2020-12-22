@@ -92,6 +92,48 @@
   }
 }
 
+@-webkit-keyframes sale {
+  0% {
+    -webkit-transform: translateX(0) rotate(720deg);
+            transform: translateX(0) rotate(720deg);
+  }
+  20% {
+    -webkit-transform: translateX(325px);
+            transform: translateX(325px);
+  }
+  60% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  80% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+  }
+}
+
+@keyframes sale {
+  0% {
+    -webkit-transform: translateX(0) rotate(720deg);
+            transform: translateX(0) rotate(720deg);
+  }
+  20% {
+    -webkit-transform: translateX(325px);
+            transform: translateX(325px);
+  }
+  60% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  80% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -358,6 +400,18 @@ a {
   display: flex;
 }
 
+.product__card_img {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.product__card_img:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+}
+
 .product__add_cart {
   font-size: 14px;
   line-height: 17px;
@@ -385,6 +439,15 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: 0 0 10px #FFFFFF;
           box-shadow: 0 0 10px #FFFFFF;
+}
+
+.product__add_sale {
+  color: red;
+  position: absolute;
+  bottom: 160px;
+  left: 0;
+  -webkit-animation: sale 2s infinite cubic-bezier(1, 1.01, 0.99, 1.01);
+          animation: sale 2s infinite cubic-bezier(1, 1.01, 0.99, 1.01);
 }
 
 .product__card_self {
@@ -1192,6 +1255,15 @@ a {
           align-items: flex-start;
   -webkit-box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
           box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.cart__card_self:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
 }
 
 .cart__card_self_img {
