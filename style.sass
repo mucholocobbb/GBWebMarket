@@ -38,14 +38,15 @@ a
         margin-left: 34px
 
         &:hover
-            animation: logoSize 0.5s
+            animation: logoSize 0.8s
 
     &__logo_img
 
-        animation: mainLogoRotateBW 1s
+        transition: transform 1s
+        transform: rotate(-10deg)
 
         &:hover
-            animation: mainLogoRotateFW 1s
+            transform: rotate(10deg)
 
 /* //////////PromoBox\\\\\\\\\\ */
 
@@ -66,7 +67,7 @@ a
 
     &__right_line
         padding-left: 64px
-        animation: promoLine 1s
+        animation: promoLine 3s
 
     &__right_text
         display: flex
@@ -174,17 +175,18 @@ a
         flex-wrap: wrap
         justify-content: center
         gap: 30px
+        &_self
+            transition: transform 5s filter 5s
 
         &_self:hover .product__card_img
             filter: brightness(50%)
+            transform: scale(1.03,1.03)
 
         &_self:hover .product__add_cart
             display: flex
 
         &_img
-            transition: transform 0.5s
-            &:hover
-                transform: scale(1.03,1.03)
+            transition: filter 1s, transform 1s
 
     &__add_cart
         font-size: 14px
@@ -207,11 +209,17 @@ a
         box-shadow: 0 0 10px #FFFFFF
 
     &__add_sale
-        color: red
+        opacity: 0.7
+        width: 46px
+        height: 24px
+        background-color: $colorMainCheck
+        color: #ffffff
+        text-align: center
+        line-height: 24px
         position: absolute
-        bottom: 160px
-        left: 0
-        animation: sale 2s infinite cubic-bezier(1,1.01,.99,1.01)
+        top: 30px
+        left: 30px
+        animation: jello-horizontal 1.2s 2s 5 both
 
     &__card_self
         position: relative

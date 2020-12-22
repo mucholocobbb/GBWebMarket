@@ -1,31 +1,4 @@
 /* //////////PAGE Setting\\\\\\\\\\ */
-@-webkit-keyframes mainLogoRotateBW {
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-@keyframes mainLogoRotateBW {
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@-webkit-keyframes mainLogoRotateFW {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes mainLogoRotateFW {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @-webkit-keyframes logoSize {
   0% {
     -webkit-transform: scale(1.1, 1.1);
@@ -36,7 +9,6 @@
             transform: scale(1, 1);
   }
 }
-
 @keyframes logoSize {
   0% {
     -webkit-transform: scale(1.1, 1.1);
@@ -50,8 +22,8 @@
 
 @-webkit-keyframes promoLine {
   0% {
-    -webkit-transform: scaleY(0.1);
-            transform: scaleY(0.1);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
   100% {
     -webkit-transform: scaleY(1);
@@ -61,8 +33,8 @@
 
 @keyframes promoLine {
   0% {
-    -webkit-transform: scaleY(0.1);
-            transform: scaleY(0.1);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
   100% {
     -webkit-transform: scaleY(1);
@@ -92,45 +64,65 @@
   }
 }
 
-@-webkit-keyframes sale {
+@-webkit-keyframes jello-horizontal {
   0% {
-    -webkit-transform: translateX(0) rotate(720deg);
-            transform: translateX(0) rotate(720deg);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
-  20% {
-    -webkit-transform: translateX(325px);
-            transform: translateX(325px);
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
   }
-  60% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
   }
-  80% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
   100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
-@keyframes sale {
+@keyframes jello-horizontal {
   0% {
-    -webkit-transform: translateX(0) rotate(720deg);
-            transform: translateX(0) rotate(720deg);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
-  20% {
-    -webkit-transform: translateX(325px);
-            transform: translateX(325px);
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
   }
-  60% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
   }
-  80% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
   100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
@@ -183,18 +175,22 @@ a {
 }
 
 .header__right_img:hover {
-  -webkit-animation: logoSize 0.5s;
-          animation: logoSize 0.5s;
+  -webkit-animation: logoSize 0.8s;
+          animation: logoSize 0.8s;
 }
 
 .header__logo_img {
-  -webkit-animation: mainLogoRotateBW 1s;
-          animation: mainLogoRotateBW 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .header__logo_img:hover {
-  -webkit-animation: mainLogoRotateFW 1s;
-          animation: mainLogoRotateFW 1s;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 
 /* //////////PromoBox\\\\\\\\\\ */
@@ -224,8 +220,8 @@ a {
 
 .promo__right_line {
   padding-left: 64px;
-  -webkit-animation: promoLine 1s;
-          animation: promoLine 1s;
+  -webkit-animation: promoLine 3s;
+          animation: promoLine 3s;
 }
 
 .promo__right_text {
@@ -389,9 +385,18 @@ a {
   gap: 30px;
 }
 
+.product__card_self {
+  -webkit-transition: -webkit-transform 5s filter 5s;
+  transition: -webkit-transform 5s filter 5s;
+  transition: transform 5s filter 5s;
+  transition: transform 5s filter 5s, -webkit-transform 5s filter 5s;
+}
+
 .product__card_self:hover .product__card_img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
 }
 
 .product__card_self:hover .product__add_cart {
@@ -401,15 +406,10 @@ a {
 }
 
 .product__card_img {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-.product__card_img:hover {
-  -webkit-transform: scale(1.03, 1.03);
-          transform: scale(1.03, 1.03);
+  -webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
+  transition: -webkit-filter 1s, -webkit-transform 1s;
+  transition: filter 1s, transform 1s;
+  transition: filter 1s, transform 1s, -webkit-filter 1s, -webkit-transform 1s;
 }
 
 .product__add_cart {
@@ -442,12 +442,18 @@ a {
 }
 
 .product__add_sale {
-  color: red;
+  opacity: 0.7;
+  width: 46px;
+  height: 24px;
+  background-color: #F16D7F;
+  color: #ffffff;
+  text-align: center;
+  line-height: 24px;
   position: absolute;
-  bottom: 160px;
-  left: 0;
-  -webkit-animation: sale 2s infinite cubic-bezier(1, 1.01, 0.99, 1.01);
-          animation: sale 2s infinite cubic-bezier(1, 1.01, 0.99, 1.01);
+  top: 30px;
+  left: 30px;
+  -webkit-animation: jello-horizontal 1.2s 2s 5 both;
+          animation: jello-horizontal 1.2s 2s 5 both;
 }
 
 .product__card_self {
