@@ -112,8 +112,6 @@
 
         &__content
             height: 694px
-            justify-content: center
-
             flex-direction: column
 
             &_position
@@ -122,3 +120,210 @@
             &_formPosition
                 padding-right: 0
                 margin-bottom: 140px
+
+@media  ( max-width: 900px ) and (min-width: 768px )
+    .promo
+
+        &__right_header
+            font-size: 38px
+            line-height: 46px
+
+        &__right_text
+            font-size: 20px
+            font-weight: 700
+            line-height: 24px
+
+        &__right_animLine
+            width: 12px
+            height: 61px
+            background-color: $colorMainCheck
+
+        &__right_content
+            height: 61px
+
+@media  ( max-width: 767px  )
+
+    .header
+
+        &__sign, &__cart
+            display: none
+
+        &__left
+            padding-left: 16px
+        &__right
+            padding-right: 16px
+
+    .promo
+        height: 363px
+
+        &__left
+            display: none
+
+        &__right
+            justify-content: center
+            padding-left: 0
+
+        &__right_header
+            font-size: 38px
+            line-height: 46px
+
+        &__right_text
+            font-size: 20px
+            font-weight: 700
+            line-height: 24px
+
+        &__right_animLine
+            width: 12px
+            height: 61px
+            background-color: $colorMainCheck
+
+        &__right_content
+            height: 61px
+
+    .catalog
+
+        &__top
+            flex-direction: column
+            align-items: center
+            margin-top: 64px
+
+        &__adaptSize
+            width: 343px
+            height: 247px
+
+        &__text
+            width: 343px
+            height: 247px
+
+        &__accImg
+            width: 343px
+            height: 111px
+
+        &__bottom
+            margin-top: 0
+
+        &__textBottom
+            width: 343px
+            height: 111px
+
+        &__position
+            margin-bottom: 32px
+            &:not(:last-child)
+                margin-right: 0
+
+    .product
+        margin-top: 64px
+
+        &__headText
+            margin-top: 3px
+
+        &__card
+            gap: 16px
+            margin-top: 64px
+            margin-bottom: 41px
+
+    .footer
+
+        &__top
+            margin-top: 110px
+
+            &_position
+                &:last-child
+                    margin-bottom: 81px
+        &__content
+            background-position: left
+            height: 550px
+
+            &_position
+                transform: scale(0.95)
+                margin-top: 0
+            &_formPosition
+
+                margin-bottom: 110px
+            &_avatarPosition
+
+                margin-top: 54px
+
+        &__bott
+            height: 143px
+            flex-direction: column-reverse
+
+            &_text
+                padding-left: 0
+                padding-bottom: 9px
+
+            &_link
+                padding-right: 0
+                padding-top: 43px
+                padding-bottom: 40px
+
+@media ( max-width: 374px )
+
+    .promo
+        &__right
+            justify-content: center
+            padding-left: 0
+            &_animLine
+                width: 12px
+                height: 92px
+
+    .catalog
+        transform: scale(0.9)
+
+        &__top
+            flex-direction: column
+            align-items: center
+            margin-top: 64px
+
+        &__adaptSize
+            width: 264px
+            height: 200px
+
+        &__text
+            width: 264px
+            height: 200px
+
+        &__accImg
+            width: 264px
+            height: 90px
+
+        &__bottom
+            margin-top: 0
+
+        &__textBottom
+            width: 264px
+            height: 90px
+
+    .product
+
+        &__cardSelf
+            width: 264px
+            height: 500px
+
+        &__cardImg
+            width: 264px
+
+        &__headText
+            width: 264px
+            text-align: center
+
+        &__cardInfo
+            width: 264px
+
+        &__cardText
+            width: 260px
+
+        &__cardSelf
+            transform: scale(0.8)
+
+    .footer
+
+        &__top
+
+            &_text
+                width: 264px
+
+        &__content
+            &_position
+
+                transform: scale(0.65)
