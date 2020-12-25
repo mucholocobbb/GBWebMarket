@@ -156,6 +156,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 4;
 }
 
 .header__left {
@@ -191,6 +193,97 @@ a {
 
 .header__search {
   margin-left: 41px;
+}
+
+#menu {
+  position: absolute;
+  left: -999999999999px;
+  visibility: hidden;
+}
+
+#menu:checked ~ .box {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  opacity: 0;
+  top: 75px;
+  width: 232px;
+  height: 768px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateY(-844px);
+          transform: translateY(-844px);
+}
+
+.box_mobile {
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 78px;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  border: 1px solid #F16D7F;
+  background-color: rgba(230, 230, 230, 0.2);
+}
+
+.box_coursor {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-right: 16px;
+  padding-top: 16px;
+}
+
+.box_heading {
+  padding-left: 34px;
+  margin-top: 9px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.box_catHeading {
+  display: block;
+  padding-left: 34px;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+}
+
+.box_ul {
+  list-style-type: none;
+  padding-left: 54px;
+  padding-top: 12px;
+}
+
+.box_link {
+  margin-bottom: 11px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
 }
 
 /* //////////PromoBox\\\\\\\\\\ */
@@ -1860,6 +1953,14 @@ a {
 }
 
 @media (max-width: 767px) {
+  .box {
+    width: 100vw;
+  }
+  .box_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .header__sign, .header__cart {
     display: none;
   }
@@ -1868,6 +1969,9 @@ a {
   }
   .header__right {
     padding-right: 16px;
+  }
+  .header__right_imgHover {
+    margin-left: 0;
   }
   .promo {
     height: 363px;
