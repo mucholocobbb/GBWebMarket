@@ -160,7 +160,8 @@ a
     display: flex
     flex-direction: column
     align-items: center
-    margin-top: 97px
+    &__index_position
+        margin-top: 97px
 
     &__headHeader
         font-size: 30px
@@ -177,12 +178,14 @@ a
         width: 336px
 
     &__card
-        margin-top: 48px
-        margin-bottom: 48px
+
         display: flex
         flex-wrap: wrap
         justify-content: center
         gap: 30px
+        &_indexPos
+            margin-top: 48px
+            margin-bottom: 48px
 
     &__cardSelf
         position: relative
@@ -424,8 +427,6 @@ a
             justify-content: center
             align-items: center
 
-@import css/_indexAdapt
-
 /* //////////CATALOG PAGE\\\\\\\\\\ */
 
 @import css/_catalog
@@ -441,3 +442,9 @@ a
 /* //////////CHECKOUT PAGE\\\\\\\\\\ */ 
 
 @import css/_checkout
+
+/* //////////Adaptive\\\\\\\\\\ */ 
+
+@import css/_indexAdapt
+
+@import css/_catalogAdapt
