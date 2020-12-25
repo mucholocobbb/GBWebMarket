@@ -1,0 +1,101 @@
+@media  (min-width: 1025px ) and (max-width: 1148px)
+
+    .product__catalog_head
+        margin-left: 120px
+
+    .page__catalog_cardSelf
+        &:last-child
+            display: none
+
+@media  ( max-width: 1024px )
+    .page__catalog_cardSelf
+        &:last-child
+            display: none
+
+    .navi
+        &__way
+            padding-right: 16px
+        &__header
+            padding-left: 16px
+
+    .product
+        &__change
+            &_list
+                margin-right: 16px
+
+        &__catalog_head
+            margin-bottom: 40px
+            margin-top: 24px
+            margin-left: 0
+
+        &__pagination
+            margin: 40px auto 0
+
+@media  ( max-width: 767px  )
+    .navi
+        flex-direction: column
+        justify-content: center
+
+        &__header
+            padding-left: 0
+            margin-bottom: 32px
+        &__way
+            padding-right: 0
+
+    .product
+        &__catalog
+
+            &_head
+                padding-left: calc(50vw - 187px)
+                padding-right: calc(50vw - 187px)
+            &_filter_text
+                display: none
+            &_filter_iconRed
+                display: none
+            &_filter_icon
+                transform: scale(2.2)
+            &_filter_list
+                width: 100vw
+
+        &__change_element
+            &:not(:last-child)
+                margin-right: 24px
+            &_header
+                font-size: 12px
+                line-height: 14px
+                color: #6F6E6E
+                margin-right: 0
+
+@media ( max-width: 374px )
+
+    .product
+        &__change_list
+            margin-right: 0
+            padding-left: 24px
+            margin-top: 24px
+
+        &__catalog
+
+            &_head
+                padding-left: calc(50vw - 132px)
+                padding-right: calc(50vw - 132px)
+                flex-direction: column
+                align-items: flex-start
+
+            &_filter_box
+                padding-left: 32px
+
+            &_filter_list
+                left: -28px
+
+            &_filter_text
+                display: block
+                transform: scale(2.2)
+                margin-left: 18px
+                margin-right: 42px
+
+        &__pagination
+            width: 264px
+
+    .pagination__coursor
+        padding: 0

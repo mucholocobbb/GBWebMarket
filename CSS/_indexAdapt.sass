@@ -1,0 +1,333 @@
+@media  (min-width: 1025px ) and (max-width: 1148px)
+    .centre
+        padding-left: calc(50vw - 512px)
+        padding-right: calc(50vw - 512px)
+
+    .catalog
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &__top
+            margin-top: 20px
+
+        &__position
+            &:not(:last-child)
+                margin-right: 19px
+
+        &__adaptSize
+            width: 232px
+            height: 168px
+
+        &__text
+            width: 232px
+            height: 168px
+
+        &__bottom
+            margin-top: 19px
+
+        &__accImg
+            width: 734px
+            height: 116px
+
+        &__textBottom
+            width: 735px
+            height: 116px
+
+@media  ( max-width: 1024px )
+
+    .centre
+        padding-left: calc(50vw - 384px)
+        padding-right: calc(50vw - 384px)
+
+    .header
+        &__left
+            padding-left: 32px
+
+        &__right
+            padding-right: 32px
+
+    .catalog
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &__top
+            margin-top: 20px
+
+        &__position
+            &:not(:last-child)
+                margin-right: 19px
+
+        &__adaptSize
+            width: 232px
+            height: 168px
+
+        &__text
+            width: 232px
+            height: 168px
+
+        &__bottom
+            margin-top: 19px
+
+        &__accImg
+            width: 734px
+            height: 116px
+
+        &__textBottom
+            width: 735px
+            height: 116px
+
+    .product
+
+        &__headText
+            margin-top: 3px
+
+        &__card
+            gap: 16px
+            &_indexPos
+                margin-top: 72px
+                margin-bottom: 32px
+
+    .footer
+
+        &__bott_text
+            padding-left: 32px
+
+        &__bott_link
+            padding-right: 32px
+
+        &__top
+            margin-top: 65px
+            flex-direction: column
+            align-items: center
+            &_position
+                margin-top: 48px
+
+                &:not(:last-child)
+                    margin-right: 0px
+                &:last-child
+                    margin-bottom: 64px
+
+        &__content
+            height: 694px
+            flex-direction: column
+
+            &_position
+                margin-top: 54px
+
+            &_formPosition
+                padding-right: 0
+                margin-bottom: 140px
+
+@media  ( max-width: 900px ) and (min-width: 768px )
+    .promo
+
+        &__right_header
+            font-size: 38px
+            line-height: 46px
+
+        &__right_text
+            font-size: 20px
+            font-weight: 700
+            line-height: 24px
+
+        &__right_animLine
+            width: 12px
+            height: 61px
+            background-color: $colorMainCheck
+
+        &__right_content
+            height: 61px
+
+@media  ( max-width: 767px  )
+
+    .header
+
+        &__sign, &__cart
+            display: none
+
+        &__left
+            padding-left: 16px
+        &__right
+            padding-right: 16px
+
+    .promo
+        height: 363px
+
+        &__left
+            display: none
+
+        &__right
+            justify-content: center
+            padding-left: 0
+
+        &__right_header
+            font-size: 38px
+            line-height: 46px
+
+        &__right_text
+            font-size: 20px
+            font-weight: 700
+            line-height: 24px
+
+        &__right_animLine
+            width: 12px
+            height: 61px
+            background-color: $colorMainCheck
+
+        &__right_content
+            height: 61px
+
+    .catalog
+
+        &__top
+            flex-direction: column
+            align-items: center
+            margin-top: 64px
+
+        &__adaptSize
+            width: 343px
+            height: 247px
+
+        &__text
+            width: 343px
+            height: 247px
+
+        &__accImg
+
+            height: 111px
+
+        &__bottom
+            margin-top: 0
+            width: 343px
+            overflow: hidden
+
+        &__textBottom
+            width: 343px
+            height: 111px
+
+        &__position
+            margin-bottom: 32px
+            &:not(:last-child)
+                margin-right: 0
+
+    .product
+        &__index_position
+            margin-top: 64px
+
+        &__headText
+            margin-top: 3px
+
+        &__card
+            gap: 16px
+            &_indexPos
+                margin-top: 64px
+                margin-bottom: 41px
+
+    .footer
+
+        &__top
+            margin-top: 110px
+
+            &_position
+                &:last-child
+                    margin-bottom: 81px
+        &__content
+            background-position: left
+            height: 550px
+
+            &_position
+                transform: scale(0.95)
+                margin-top: 0
+            &_formPosition
+
+                margin-bottom: 110px
+            &_avatarPosition
+
+                margin-top: 54px
+
+        &__bott
+            height: 143px
+            flex-direction: column-reverse
+
+            &_text
+                padding-left: 0
+                padding-bottom: 9px
+
+            &_link
+                padding-right: 0
+                padding-top: 43px
+                padding-bottom: 40px
+
+@media ( max-width: 374px )
+
+    .promo
+        &__right
+            justify-content: center
+            padding-left: 0
+            &_animLine
+                width: 12px
+                height: 92px
+
+    .catalog
+        transform: scale(0.9)
+
+        &__top
+            flex-direction: column
+            align-items: center
+            margin-top: 64px
+
+        &__adaptSize
+            width: 264px
+            height: 200px
+
+        &__text
+            width: 264px
+            height: 200px
+
+        &__accImg
+            height: 90px
+
+        &__bottom
+            margin-top: 0
+            width: 264px
+            overflow: hidden
+
+        &__textBottom
+            width: 264px
+            height: 90px
+
+    .product
+
+        &__cardSelf
+            width: 264px
+            height: 500px
+
+        &__cardImg
+            width: 264px
+
+        &__headText
+            width: 264px
+            text-align: center
+
+        &__cardInfo
+            width: 264px
+
+        &__cardText
+            width: 260px
+
+        &__cardSelf
+            transform: scale(0.8)
+
+    .footer
+
+        &__top
+
+            &_text
+                width: 264px
+
+        &__content
+            &_position
+
+                transform: scale(0.65)

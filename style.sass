@@ -31,21 +31,19 @@ a
     &__right
         padding-right: 5px
 
-    &__search_img
+        &_imgHover
+            margin-left: 34px
+            &:hover
+                animation: logoSize 0.8s
+
+    &__logo
+        transition: transform 0.75s
+        transform: rotate(-12deg)
+        &:hover
+            transform: rotate(12deg)
+
+    &__search
         margin-left: 41px
-
-    &__right_img
-        margin-left: 34px
-
-        &:hover
-            animation: logoSize 0.5s
-
-    &__logo_img
-
-        animation: mainLogoRotateBW 1s
-
-        &:hover
-            animation: mainLogoRotateFW 1s
 
 /* //////////PromoBox\\\\\\\\\\ */
 
@@ -55,95 +53,106 @@ a
     padding-right: calc(50vw - 800px)
     background: rgba(113, 103, 105, 0.08)
 
-    &__left_img
+    &__img
         width: 100%
+
+    &__left
+        flex-grow: 1
 
     &__right
         display: flex
+        flex-grow: 1
         align-items: center
         width: 800px
         background-color: #F1E4E6
-
-    &__right_line
+        box-sizing: border-box
         padding-left: 64px
-        animation: promoLine 1s
 
-    &__right_text
-        display: flex
-        height: 92px
-        margin-left: 16px
-        flex-direction: column
-        justify-content: flex-end
-        animation: promoText 1s
+        &_animLine
+            width: 12px
+            height: 92px
+            background-color: $colorMainCheck
+            animation: promoLine 3s
 
-    &__right_header
+        &_content
+            display: flex
+            height: 92px
+            margin-left: 16px
+            flex-direction: column
+            justify-content: flex-end
+            animation: promoText 1s
 
-        font-weight: 900
-        font-size: 48px
-        line-height: 58px
-        color: #222222
+        &_header
+            font-weight: 900
+            font-size: 48px
+            line-height: 58px
+            color: #222222
 
-    &__right_content
+        &_text
+            font-weight: 700
+            font-size: 32px
+            line-height: 38.5px
+            color: #222222
 
-        font-weight: 700
-        font-size: 32px
-        line-height: 38.5px
-        color: #222222
-
-    &__right_contentred
-        color: $colorMainCheck
+        &_textRed
+            color: $colorMainCheck
 
 /* //////////CatalogBox\\\\\\\\\\ */
 
-.catalog__top
-    margin-top: 64px
-    display: flex
+.catalog
+    transition: transform 0.5s, box-shadow 1s
+    &:hover
+        transform: scale(1.01,1.01)
+        box-shadow: 0 0 100px -50px
 
-.catalog__position
-    position: relative
+    &__top
+        margin-top: 64px
+        display: flex
 
-    &:not(:last-child)
-        margin-right: 30px
+    &__position
+        position: relative
+        &:not(:last-child)
+            margin-right: 30px
 
-.catalog__text
-    position: absolute
-    height: 260px
-    width: 360px
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    top: 0
-    color: aliceblue
+    &__text
+        position: absolute
+        height: 260px
+        width: 360px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        top: 0
+        color: aliceblue
 
-.catalog__heading_text
-    font-weight: 300
-    font-size: 16px
-    line-height: 19px
-    color: #FFFFFF
-    text-align: center
+    &__headText
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF
+        text-align: center
 
-.catalog_heading_redtext
-    font-size: 24px
-    line-height: 40px
-    text-align: center
-    font-weight: 700
-    color: $colorMainCheck
+    &__headRedText
+        font-size: 24px
+        line-height: 40px
+        text-align: center
+        font-weight: 700
+        color: $colorMainCheck
 
-.catalog__bott
-    margin-top: 30px
+    &__bottom
+        margin-top: 30px
 
-.catalog__text_bott
-    position: absolute
-    height: 180px
-    width: 1140px
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    top: 0
-    color: aliceblue
-    text-align: center
+    &__textBottom
+        position: absolute
+        height: 180px
+        width: 1140px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        top: 0
+        color: aliceblue
+        text-align: center
 
 /* //////////ProductBox\\\\\\\\\\ */
 
@@ -151,15 +160,16 @@ a
     display: flex
     flex-direction: column
     align-items: center
+    &__index_position
+        margin-top: 97px
 
-    &__head_header
+    &__headHeader
         font-size: 30px
         line-height: 36px
         color: #222222
-        margin-top: 97px
         text-align: center
 
-    &__head_text
+    &__headText
         font-size: 14px
         line-height: 17px
         color: #9F9F9F
@@ -168,25 +178,35 @@ a
         width: 336px
 
     &__card
-        margin-top: 48px
-        margin-bottom: 48px
+
         display: flex
         flex-wrap: wrap
         justify-content: center
         gap: 30px
+        &_indexPos
+            margin-top: 48px
+            margin-bottom: 48px
 
-        &_self:hover .product__card_img
+    &__cardSelf
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: end
+        width: 360px
+        height: 581px
+        background-color: #F8F8F8
+
+        &:hover .product__cardImg
             filter: brightness(50%)
+            transform: scale(1.03,1.03)
 
-        &_self:hover .product__add_cart
+        &:hover .product__addCart
             display: flex
 
-        &_img
-            transition: transform 0.5s
-            &:hover
-                transform: scale(1.03,1.03)
+    &__cardImg
+        transition: filter 1s, transform 1s
 
-    &__add_cart
+    &__addCart
         font-size: 14px
         line-height: 17px
         color: #FFFFFF
@@ -202,44 +222,41 @@ a
         box-shadow: 0 0 5px #FFFFFF
         display: none
 
-    &__add_cart:active
+    &__addCart:active
         background-color: rgba(255, 255, 255, 0.2)
         box-shadow: 0 0 10px #FFFFFF
 
-    &__add_sale
-        color: red
+    &__addSale
+        opacity: 0.7
+        width: 46px
+        height: 24px
+        background-color: $colorMainCheck
+        color: #ffffff
+        text-align: center
+        line-height: 24px
         position: absolute
-        bottom: 160px
-        left: 0
-        animation: sale 2s infinite cubic-bezier(1,1.01,.99,1.01)
+        top: 30px
+        left: 30px
+        animation: jello-horizontal 1.2s 2s 5 both
 
-    &__card_self
-        position: relative
-        display: flex
-        flex-direction: column
-        align-items: end
-        width: 360px
-        height: 581px
-        background-color: #F8F8F8
-
-    &__card_info
+    &__cardInfo
         margin-top: 25px
         padding-left: 16px
         width: 328px
 
-    &__card_header
+    &__cardHeader
         font-size: 13px
         line-height: 16px
         color: #000000
 
-    &__card_text
+    &__cardText
         font-weight: 300
         font-size: 14px
         line-height: 17px
         color: #5D5D5D
         margin-top: 12px
 
-    &__card_price
+    &__cardPrice
         font-size: 16px
         line-height: 19px
         color: $colorMainCheck
@@ -249,20 +266,18 @@ a
         font-size: 16px
         line-height: 19px
         color: #F26376
+        &:hover
+            color: #FFFFFF
 
-    &__button:hover
-        color: #FFFFFF
-
-    &__button_box
-        border: 1px solid #FF6A6A
-        height: 47px
-        width: 211px
-        display: flex
-        justify-content: center
-        align-items: center
-
-    &__button_box:hover
-        background-color: $colorMainCheck
+        &_hov
+            border: 1px solid #FF6A6A
+            height: 47px
+            width: 211px
+            display: flex
+            justify-content: center
+            align-items: center
+            &:hover
+                background-color: $colorMainCheck
 
 /* //////////Footer\\\\\\\\\\ */
 
@@ -274,15 +289,14 @@ a
         align-items: center
         margin-top: 95px
         background-color: #222224
-        height: 341px
+        min-height: 341px
 
         &_position
             display: flex
             flex-direction: column
             align-items: center
-
-        &_position:not(:last-child)
-            margin-right: 30px
+            &:not(:last-child)
+                margin-right: 30px
 
         &_header
             margin-top: 28px
@@ -298,12 +312,13 @@ a
             font-size: 14px
             line-height: 17px
             color: #FBFBFB
-            width: 360px
+            max-width: 360px
             min-height: 34px
 
     &__content
         display: flex
         justify-content: space-between
+
         align-items: center
         height: 448px
         background: no-repeat
@@ -315,62 +330,65 @@ a
             display: flex
             flex-direction: column
             align-items: center
+            flex-basis: 360px
 
-    &__person_text
-        font-weight: 400
-        font-size: 20px
-        line-height: 24px
-        text-align: center
-        width: 360px
-        min-height: 99px
-        margin-top: 30px
+        &_personText
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            text-align: center
+            max-width: 360px
+            min-height: 99px
+            margin-top: 30px
 
-    &__content_heading
-        text-align: center
-        width: 557px
-        min-height: 61px
+        &_heading
+            text-align: center
+            min-width: 356px
+            min-height: 61px
 
-    &__heading
-        font-weight: 700
-        font-size: 24px
-        line-height: 40px
-        text-align: center
+        &_formPosition
+            padding-right: 64px
 
-    &__text
-        font-weight: 400
-        font-size: 18px
-        line-height: 30px
-        text-align: center
+        &_formHeading
+            font-weight: 700
+            font-size: 24px
+            line-height: 40px
+            text-align: center
 
-    &__content_form
-        margin-top: 32px
+        &_formText
+            font-weight: 400
+            font-size: 18px
+            line-height: 30px
+            text-align: center
 
-    &__content_email
-        width: 256px
-        height: 49px
-        border-top-left-radius: 25px
-        border-bottom-left-radius: 25px
-        border: 0
-        background-color: #E1E1E1
-        color: #222224
-        font-size: 14px
-        line-height: 17px
-        padding-inline-start: 22px
-        padding-inline-end: 22px
+        &_form
+            margin-top: 32px
 
-    &__content_button
-        width: 100px
-        height: 49px
-        border-top-right-radius: 25px
-        border-bottom-right-radius: 25px
-        border: 0
-        background-color: $colorMainCheck
-        color: #FFFFFF
-        font-size: 14px
-        line-height: 17px
+        &_email
+            width: 256px
+            height: 49px
+            border-top-left-radius: 25px
+            border-bottom-left-radius: 25px
+            border: 0
+            background-color: #E1E1E1
+            color: #222224
+            font-size: 14px
+            line-height: 17px
+            padding-inline-start: 22px
+            padding-inline-end: 22px
 
-        &:hover
-            background-color: $colorMainHover
+        &_button
+            width: 100px
+            height: 49px
+            border-top-right-radius: 25px
+            border-bottom-right-radius: 25px
+            border: 0
+            background-color: $colorMainCheck
+            color: #FFFFFF
+            font-size: 14px
+            line-height: 17px
+            &:hover
+                background-color: $colorMainHover
 
     &__bott
         background-color: #222224
@@ -385,7 +403,7 @@ a
             color: #FBFBFB
             padding-left: 5px
 
-        &_link_box
+        &_linkBox
             height: 32px
             width: 32px
             background-color: #FFFFFF
@@ -398,6 +416,9 @@ a
             &:hover
                 background-color: $colorMainCheck
 
+            &:hover .footer__bott_links
+                fill: white
+
         &_link
             display: flex
 
@@ -405,9 +426,6 @@ a
             display: flex
             justify-content: center
             align-items: center
-
-            &:hover .footer__bott_links
-                fill: white
 
 /* //////////CATALOG PAGE\\\\\\\\\\ */
 
@@ -424,3 +442,9 @@ a
 /* //////////CHECKOUT PAGE\\\\\\\\\\ */ 
 
 @import css/_checkout
+
+/* //////////Adaptive\\\\\\\\\\ */ 
+
+@import css/_indexAdapt
+
+@import css/_catalogAdapt

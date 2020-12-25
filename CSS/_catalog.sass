@@ -31,13 +31,14 @@
 
 /* //////////Product Box\\\\\\\\\\ */
 
-.product__head_position
+.product__headPosition
     display: block
 
 .product__catalog_head
     margin-bottom: 65px
     margin-top: 51px
     display: flex
+    justify-content: space-between
 
 .product__catalog_filter_text
     margin-right: 11px
@@ -126,8 +127,8 @@
         opacity: 0
 
 .product__change_list
-    margin-left: 304px
     display: flex
+    margin-right: 36.5%
 
 //разобраться с рамкой
 
@@ -137,12 +138,6 @@
     line-height: 17px
     color: #6F6E6E
     margin-right: 10px
-    // outline: none
-    // &::-webkit-details-marker
-    //     display: none
-    // &:focus
-    //     outline: -webkit-focus-ring-color auto 0
-    //     outline-offset: 0
 
 .product__change_element_img
     margin-left: 10px
@@ -154,15 +149,19 @@
     //Разобраться с рамкой
 
 .product__change_element
-    margin-right: 28px
     display: flex
     position: relative
-    // outline: none
-    // &::-webkit-details-marker
-    //     display: none
-    // &:focus
-    //     outline: -webkit-focus-ring-color auto 0
-    //     outline-offset: 0
+.product__change_element_box
+    position: absolute
+    top: 17px
+    left: 0
+    background-color: #ffffff
+    opacity: 0.8
+    box-shadow: 0 0 10px -5px
+    z-index: 1
+
+.product__change_element:not(:last-child)
+    margin-right: 28px
 
     &_box
         background-color: #ffffff
