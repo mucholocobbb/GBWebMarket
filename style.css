@@ -643,6 +643,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .product__button_hov:hover {
@@ -797,6 +799,8 @@ a {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 17px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .footer__content_button:hover {
@@ -951,7 +955,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 20;
+  z-index: 2;
 }
 
 .product__catalog_filter_box:hover .product__catalog_filter_text {
@@ -1120,7 +1124,7 @@ a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-bottom: 6px;
+  margin: 6px;
 }
 
 .product__change_checkbox_checkbox {
@@ -1333,6 +1337,8 @@ a {
   height: 48px;
   width: 211px;
   margin: 0 auto;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .product__preview_button_text {
@@ -1504,6 +1510,8 @@ a {
   line-height: 17px;
   color: #000000;
   border: 1px solid #A4A4A4;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .cart__card_button_style:hover {
@@ -1557,6 +1565,8 @@ a {
   color: #4A4A4A;
   border: 1px solid #A4A4A4;
   background-color: #FFFFFF;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .cart__form_box_button:hover {
@@ -1643,6 +1653,8 @@ a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .cart__form_final_button:hover {
@@ -1733,6 +1745,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   border: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .checkout__form_button:hover {
@@ -2214,6 +2228,9 @@ a {
   .navi__way {
     padding-right: 0;
   }
+  .product__price_box_size {
+    left: -120px;
+  }
   .product__catalog_head {
     padding-left: calc(50vw - 187px);
     padding-right: calc(50vw - 187px);
@@ -2245,6 +2262,9 @@ a {
 @media (max-width: 374px) {
   .product__filter_header_box {
     width: 90vw;
+  }
+  .product__price_box_size {
+    left: -120px;
   }
   .product__change_list {
     margin-right: 0;
