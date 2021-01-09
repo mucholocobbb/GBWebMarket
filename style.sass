@@ -24,6 +24,8 @@ a
     display: flex
     justify-content: space-between
     align-items: center
+    position: relative
+    z-index: 4
 
     &__left
         padding-left: 5px
@@ -44,6 +46,70 @@ a
 
     &__search
         margin-left: 41px
+
+#menu
+    position: absolute
+    left: -999999999999px
+    visibility: hidden
+    &:checked ~ .box
+        opacity: 1
+        transform: translateY(0)
+
+.box
+    display: flex
+    flex-direction: column
+    position: absolute
+    z-index: 3
+    right: 0
+    opacity: 0
+    top: 75px
+    width: 232px
+    height: 768px
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    transition: all 0.4s
+    transform: translateY(-844px)
+
+    &_mobile
+        display: none
+        justify-content: space-around
+        align-items: center
+        height: 78px
+        filter: brightness(0.5)
+        border: 1px solid $colorMainCheck
+        background-color: rgba(230,230 ,230 ,0.2 )
+
+    &_coursor
+        align-self: flex-end
+        justify-content: flex-start
+        padding-right: 16px
+        padding-top: 16px
+
+    &_heading
+        padding-left: 34px
+        margin-top: 9px
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+
+    &_catHeading
+        display: block
+        padding-left: 34px
+        margin-top: 24px
+        font-size: 14px
+        line-height: 17px
+        color: $colorMainCheck
+
+    &_ul
+        list-style-type: none
+        padding-left: 54px
+        padding-top: 12px
+    &_link
+        margin-bottom: 11px
+        font-size: 14px
+        line-height: 17px
+        color: #6F6E6E
 
 /* //////////PromoBox\\\\\\\\\\ */
 
@@ -276,6 +342,7 @@ a
             display: flex
             justify-content: center
             align-items: center
+            transition: background-color 0.3s
             &:hover
                 background-color: $colorMainCheck
 
@@ -387,6 +454,7 @@ a
             color: #FFFFFF
             font-size: 14px
             line-height: 17px
+            transition: background-color 0.3s
             &:hover
                 background-color: $colorMainHover
 
@@ -450,3 +518,7 @@ a
 @import css/_catalogAdapt
 
 @import css/_productAdapt
+
+@import css/_cartAdapt
+
+@import css/_checkoutAdapt
